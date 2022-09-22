@@ -6,17 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.activity_note_adapter.view.*
+import kotlinx.android.synthetic.main.activity_adapter_note.view.*
 
 class NoteAdapter (private val notes: ArrayList<Note>, private val
-        listener: OnAdapterListener
-) :
-RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
+listener: OnAdapterListener) :
+    RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):
             NoteViewHolder {
         return NoteViewHolder(
 
-            LayoutInflater.from(parent.context).inflate(R.layout.activity_note_adapter,parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.activity_adapter_note,parent, false)
         )
     }
     override fun onBindViewHolder(holder: NoteViewHolder, position:
